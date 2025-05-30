@@ -1,0 +1,2 @@
+sh "echo key: ${KEY}|base64 > tmp"
+sh "cat ./tmp"

@@ -1,0 +1,15 @@
+#reboot into bios
+	shutdown /r /fw
+#check return code on cmd
+	echo %ERRORLEVEL%
+#set/clear enviroment variables in windows
+	#on powershell(not tested)
+		set HTTP_PROXY <value>
+	#on cmd
+		set HTTP_PROXY=<value>
+#UCN path to C:\Windows
+	\\localhost\admin$\
+#stop a particular service
+	Stop-Service -Name "<service_name>"
+# su equivalent
+	runas /user:lab_admin cmd
