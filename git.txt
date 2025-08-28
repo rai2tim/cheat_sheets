@@ -68,6 +68,9 @@
 	git merge-base <feature_branck> main
 # revert the last commit and mark all its files as staged
 	git reset --soft HEAD^
+# by default, git fetch does not remove remote branches that no longer have a counterpart branch on the remote, usefull with Bitbucket.
+	git fetch --prune
 -----------------unanswared question---------------------
 #?!?!?
+
 	git show
