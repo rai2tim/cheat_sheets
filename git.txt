@@ -70,6 +70,8 @@
 	git reset --soft HEAD^
 # by default, git fetch does not remove remote branches that no longer have a counterpart branch on the remote, usefull with Bitbucket.
 	git fetch --prune
+# clone all repos from all organisations
+	gh org list | while read -r org_name; do gh repo list -L 1000 $org_name --json name | jq -r '.[].name' | while read -r repo; do if [[ ! -d $org_name ]]; then mkdir "$org_name" && cd "$org_name"; else cd $org_name ;  fi; git clone "https://<your_username>:ghp_<your_password>@github.boschdevcloud.com/$org_name/$repo.git" ; cd .. ; done ; done
 -----------------unanswared question---------------------
 #?!?!?
 
