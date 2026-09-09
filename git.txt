@@ -1,5 +1,5 @@
 # list all commits that change a particular file
-	git log --follow --
+	git log --follow <file_to_track>
 #rebase a feature branch on top of main
 		git checkout feature
 		git rebase main
